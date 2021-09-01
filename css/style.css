@@ -1,1 +1,1249 @@
+/* ---------------------- FONT ---------------------- */
+@font-face {
+    font-family: FONT_LIGHT;
+    src: url("../fonts/Inter/Inter-Light.ttf");
+}
 
+@font-face {
+    font-family: FONT_MEDIUM;
+    src: url("../fonts/Inter/Inter-Medium.ttf");
+}
+
+@font-face {
+    font-family: FONT_SEMIBOLD;
+    src: url("../fonts/Inter/Inter-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: FONT_BOLD;
+    src: url("../fonts/Inter/Inter-Bold.ttf");
+}
+
+@font-face {
+    font-family: FONT_EXTRABOLD;
+    src: url("../fonts/Inter/Inter-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: FONT_BLACK;
+    src: url("../fonts/Inter/Inter-Black.ttf");
+}
+
+/* ---------------------- CUSTOM VAR ---------------------- */
+
+:root {
+    /*  FONT SIZE ----------------------  */
+    --fontSizeXS: 0.6rem;
+    --fontSizeS: 0.8rem;
+    --fontSizeDefault: 1rem;
+    --fontSizeM: 1.2rem;
+    --fontSizeL: 1.4rem;
+    --fontSizeXL: 1.6rem;
+    --fontSize2XL: 1.8rem;
+    --fontSize3XL: 2rem;
+    --fontSize4XL: 2.5rem;
+    --fontSize5XL: 3rem;
+    --fontSize6XL: 3.5rem;
+    --fontSize7XL: 4rem;
+
+
+    /*  COLOR ----------------------  */
+    --colorDefault: #88BBBE;
+    --colorCyan : #00BCB7;
+    --colorBlack: #000;
+    --colorWhite: #FFF;
+    --colorGrayLight : #F6F6F6;
+
+
+    /*  SIZE ELEMENT ---------------------- */
+    --widthScreen: 100vw;
+    --widthFull: 100%;
+    --heightScreen: 100vh;
+    --heightFull: 100%;
+    --heightArea : calc(100vh - calc(100vh - 100%));
+}
+
+/* ---------------------- CUSTOM WEB ---------------------- */
+html, body {
+    font-family: FONT_MEDIUM;
+    font-size: var(--fontSizeDefault);
+    color: var(--colorBlack);
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 7.5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(136,187,190,0.25);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--colorDefault);
+    border-radius: 5px;
+}
+/* ---------------------- CUSTOM PAGE ---------------------- */
+.blockWrap {
+    height: var(--heightScreen);
+}
+
+
+/* ---------------------- HEADER ---------------------- */
+
+.blockHeader {
+    background : var(--colorDefault);
+    height: 50px;
+    position: fixed;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+    z-index: 11;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+}
+.hdShow {
+    top: 0px;
+}
+.hdHide {
+    top: -50px;
+}
+
+.linkLogo {
+    display: flex;
+    align-items: center;
+    transition: 0.4s all;
+}
+
+.linkLogo:hover {
+    filter: brightness(1.1);
+    transition: 0.4s all;
+}
+
+.imgLogo {
+    width: 35px;
+    height: 35px;
+    margin: 0px 0px 0px 25px;
+}
+
+.textLogo {
+    font-family: FONT_EXTRABOLD;
+    margin: 0px 0px 0px 10px;
+}
+
+.blockMenu {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.imgMenuOpen,
+.imgMenuClose {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top : 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: 0.4s all;
+    opacity: 0;
+    transform: scale(0.6);
+}
+
+.icMenuActive {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.blockConnect {
+    position: absolute;
+    right: 15px;
+}
+
+.linkConnect {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    height: 32.5px;
+    border-radius: 25px;
+    padding: 0px 12.5px;
+    transition: 0.4s all;
+}
+
+.linkConnect:hover {
+    filter: brightness(0.95);
+    transition: 0.4s all;
+}
+
+.textConnect {
+    font-family: FONT_BOLD;
+    font-size: 12px;
+    color: #88BBBE;
+}
+
+.linkAddress {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    height: 32.5px;
+    border-radius: 25px;
+    padding: 0px 12.5px;
+    transition: 0.4s all;
+}
+
+.linkAddress:hover {
+    filter: brightness(0.95);
+    transition: 0.4s all;
+}
+
+.textAddress {
+    font-family: FONT_BOLD;
+    font-size: 12px;
+    color: #88BBBE;
+}
+
+
+/* ---------------------- TAB MENU ---------------------- */
+
+
+.blockTab {
+    width: 200px;
+    height: var(--heightScreen);
+    background: #FFF;
+    position: fixed;
+    z-index: 10;
+    transition: 0.4s all;
+}
+
+.blockTabHidden {
+    width: 60px;
+    transition: 0.4s all;
+}
+
+.tabShow {
+    padding : 50px 0px 0px 0px;
+    
+}
+
+.blockListTab {
+    overflow-x: hidden;
+    overflow-y : auto;
+    height: calc(var(--heightFull) - 100px);
+    padding: 10px 5px;
+}
+
+.blockListTab::-webkit-scrollbar {
+    width: 5px;
+}
+
+.blockListTabActive::-webkit-scrollbar {
+    width: 2px;
+}
+
+.blockListTab::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.blockListTab::-webkit-scrollbar-thumb {
+    background: var(--colorDefault);
+    border-radius: 4px;
+}
+
+.blockListTab .listTabItem {
+    cursor: pointer;
+    transition: 0.4s all;
+    position: relative;
+    border-radius: 5px;
+    margin: 0px 0px 5px 0px;
+}
+.blockListTab .itemTab {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12.5px;
+    border-radius: 8px;
+}
+
+.blockListTab .itemTab:hover {
+    background-color: rgba(136,187,190,0.15);
+    transition: 0.4s all;
+}
+
+.blockListTab .listTabItem.active .itemTab {
+    background-color: rgba(136,187,190,0.15);
+    transition: 0.4s all;
+    filter: brightness(0.8);
+}
+
+.blockListTab .imgTabIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.blockListTab .textTab {
+    position: absolute;
+    left : 50px;
+    font-size: var(--fontSizeS);
+    transition: 0.4s all;
+}
+
+.blockListTab .contentTextTab {
+    color : var(--colorDefault);
+    font-family: FONT_BOLD;
+}
+
+.blockListTab .imgTabDrop {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 15px;
+    transition: 0.4s all;
+}
+
+.blockListTab .imgTabDrop.active {
+    transform: scaleY(-1);
+    transition: 0.4s all;
+}
+
+
+.blockTabHidden .textTab {
+    left : 100px;
+    transition: 0.4s all;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.blockTabHidden .imgTabDrop {
+    right: -15px;
+    opacity: 0;
+}
+
+.blockListTab .itemTabChild {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.blockListTab .contentTextTabChild {
+    color : var(--colorDefault);
+    font-family: FONT_BOLD;
+    font-size: 12px;
+}
+
+.blockListTab .textChild {
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+
+.blockListTab .listTabDrop.active .itemTabChild.active .textChild:before {
+    content: '';
+    position: absolute;
+    right : 0px;
+    width: 2.5px;
+    height: 15px;
+    background :#88BBBE;
+}
+
+.blockListTab .listTabDrop.active .itemTabChild.active .contentTextTabChild {
+    color: #88BBBE;
+}
+
+.blockListTab .listTabDrop .itemChildTab {
+    transition: 0.4s all;
+    max-height: 0px;
+    overflow: hidden;
+}
+.blockListTab .listTabDrop.active .itemChildTab {
+    transition: 0.4s all;
+    max-height: calc(22px * 10);
+    padding: 10px 5px;
+}
+
+/* ---------------------- TAB TOOL ---------------------- */
+
+.blockListTool {
+    height: 100px;
+    border-top : 1.5px solid rgba(136,187,190,0.25);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: 0.4s all;
+}
+
+.blockListTool.active {
+    align-items: flex-start;
+    transition: 0.4s all;
+}
+
+.blockListTool.active .listToolItem {
+    opacity: 0;
+    transition: 0.4s all;
+}
+
+.blockListTool .listToolItem {
+    position: absolute;
+    cursor: pointer;
+    left: 5px;
+    top : calc(100px / 2 - 24px);
+    border-radius: 5px;
+    margin: 0px 0px 5px 0px;
+    transition: 0.4s all;
+}
+
+.blockListTool .itemTool {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12.5px;
+    border-radius: 8px;
+    transition: 0.4s all;
+}
+
+.blockListTool .itemTool:hover {
+    background-color: rgba(136,187,190,0.15);
+    transition: 0.4s all;
+}
+
+.blockListTool .imgToolIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.blockListTool.active .listToolInfo {
+    padding: 5px;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: 0.4s all;
+}
+
+.blockListTool .listToolInfo {
+    padding: 5px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 0.4s all;
+}
+
+.blockListTool .infoMoney {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.blockListTool .textMoney {
+    font-family: FONT_BOLD;
+    color: #88BBBE;
+    margin: 5px 0px 0px 8px;
+}
+
+.blockListTool .imgMoney {
+    width: 32px;
+    height: 32px;
+}
+
+.blockListTool .infoListSocial {
+    width: 100%;
+    margin: 12.5px 0px 0px 0px;
+    display: flex;
+    align-items : center;
+}
+
+.blockListTool .socialItem {
+    margin: 0px 15px 0px 0px;
+    transition: 0.4s all;
+}
+
+.blockListTool .socialItem:hover {
+    transform: scale(1.1);
+    transition: 0.4s all;
+}
+
+.blockListTool .imgSocial {
+    width: 25px;
+    height: 25px;
+}
+
+/* ---------------------- CONTENT ---------------------- */
+
+
+.blockContent {
+    width: var(--widthFull);
+    background: rgba(136,187,190,0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.blockPage {
+    width: var(--widthScreen);
+    min-height: 100vh;
+    padding: 55px 5px 5px 215px;
+    transition: 0.4s all;
+}
+
+.blockPageTabHidden {
+    padding: 55px 5px 5px 75px;
+    transition: 0.4s all;
+}
+
+/* ---------------------- PAGE TRADE ---------------------- */
+
+.wrapPageTrade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 2;
+}
+
+/* ---------------------- PAGE TRADE ---------------------- */
+.blockSwapPage {
+    background: rgba(255,255,255,0.55);
+    border-radius: 25px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0px 40px 0px;
+    border : 1.5px solid #88BBBE;
+}
+
+.pageItem {
+    height: 40px;
+    border-radius: 25px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.textPageItem {
+    font-family: FONT_BOLD;
+    color: #88BBBE;
+}
+
+.pageItem.active {
+    background: #88BBBE;
+}
+
+.pageItem.active .textPageItem {
+    color: #FFF;
+}
+
+/* ---------------------- BOX FORM ---------------------- */
+.blockBoxForm {
+    width: 400px;
+    background-color: #FFF;
+    border-radius: 18px;
+    margin: 0px 0px 150px 0px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ---------------------- HEADER FORM ---------------------- */
+.blockHeaderForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 15px 20px 25px;
+    border-bottom : 1px solid rgb(231, 227, 235);
+    position: relative;
+    align-items: center;
+}
+.titleHeader {
+    font-size: 18px;
+    color: #88BBBE;
+    font-family: FONT_EXTRABOLD;
+    
+}
+.labelHeader {
+    color: #AFAFAF;
+    font-size: 12px;
+    font-family: FONT_SEMIBOLD;
+    margin: 10px 0px 0px 0px;
+}
+
+.toolHeader {
+    display: flex;
+    align-items: center;
+}
+
+.blockHeaderForm .itemTool {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    border-radius: 25px;
+    transition: 0.4s all;
+    cursor: pointer;
+    margin: 0px 0px 0px 5px;
+}
+
+.blockHeaderForm .itemTool:hover {
+    background-color: rgba(136,187,190,0.15);
+    transition: 0.4s all;
+}
+
+.blockHeaderForm .imgToolIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.blockHeaderForm .toolBack {
+    position: absolute;
+    left: -17.5px;
+    top : 12.5px;
+    width: 35px;
+    height: 35px;
+    background: #FFF;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s all;
+}
+
+.blockHeaderForm .toolBack:hover {
+    filter: brightness(0.95);
+    transition: 0.4s all;
+}
+
+.blockHeaderForm .imgToolBack {
+    width: 30px;
+    height: 30px;
+}
+
+/* ---------------------- CONTENT FORM ---------------------- */
+.blockContentForm {
+    padding: 15px 20px;
+}
+
+/* ---------------------- INPUT ---------------------- */
+.blockInput {
+    background-color: rgba(136,187,190,0.15);
+    border-radius: 12px;
+    padding: 15px;
+}
+.headerInput {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.titleInput {
+    color: #88BBBE;
+    font-family: FONT_BOLD;
+}
+
+.infoInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blockInput .itemTool {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 7.5px;
+    height: 40px;
+    border-radius: 25px;
+    transition: 0.4s all;
+    cursor: pointer;
+    margin: 0px 0px 0px 5px;
+    background: #FFF;
+}
+
+.blockInput .itemTool:hover {
+    background-color: rgba(136,187,190,0.1);
+    transition: 0.4s all;
+}
+
+.blockInput .imgToolIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.blockInput .imgToolIcon.icToken {
+    width: 22px;
+    height: 22px;
+}
+
+.blockInput .imgToolIcon.icDrop {
+    width: 12px;
+    height: 12px;
+}
+
+.balanceText {
+    font-family: FONT_BOLD;
+    padding: 0px 7.5px 0px 5px;
+    font-size: 12px;
+}
+
+.contentInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px 0px 0px;
+}
+
+.inputText {
+    width: calc(100% - 150px);
+}
+
+.inputForm {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #88BBBE;
+    font-family: FONT_BOLD;
+    margin: 0px 0px 0px -2.5px;
+    width: 100%;
+}
+
+.inputForm::placeholder {
+    color: #AFAFAF;
+}
+
+.toolText {
+    color: #88BBBE;
+    font-family: FONT_BOLD;
+    padding: 0px 7.5px 0px 5px;
+    font-size: 13px;
+}
+
+/* ---------------------- BLOCK SWAP INPUT ---------------------- */
+.blockSwapInput {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.itemSwap {
+    width: 40px;
+    height: 40px;
+    transition: 0.4s all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.itemSwap:hover {
+    background: rgba(136,187,190,0.25);
+    transition: 0.4s all;
+}
+.imgSwap {
+    width: 25px;
+    height: 25px;
+}
+/* ---------------------- BLOCK INFOTRANS ---------------------- */
+.blockInfoTrans {
+    margin: 20px 0px;
+}
+.blockInfoTrans .infoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 25px;
+}
+.blockInfoTrans .labelInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blockInfoTrans .contentInfo {
+    display: flex;
+    align-items: center;
+}
+.blockInfoTrans .imgToolIcon {
+    width: 12px;
+    height: 12px;
+    margin: 0px 0px 0px 1.5px;
+}
+.blockInfoTrans .toolText {
+    margin: 0px 5px 0px 0px;
+}
+.blockInfoTrans .labelText {
+    font-family: FONT_BOLD;
+    font-size: 12px;
+}
+.blockInfoTrans .contentText {
+    font-family: FONT_BOLD;
+    font-size: 12px;
+}
+.blockInfoTrans .toolText {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+.blockInfoTrans .toolText:hover {
+    background-color: rgba(136,187,190,0.25);
+    transition: 0.4s all;
+}
+/* ---------------------- BLOCK BUTTON ---------------------- */
+.blockButton {
+    display: flex;
+    margin: 15px -5px 5px -5px;
+}
+.itemButton {
+    flex: 1;
+    height: 45px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin: 0px 5px;
+    background: #88BBBE;
+    transition: 0.4s all;
+}
+.itemButton:hover {
+    background: #00BCB7;
+    transition: 0.4s all;
+}
+.textButton {
+    color: #FFF;
+    font-family: FONT_BOLD;
+}
+
+/* ---------------------- BLOCK LIST LIQUIDITY ---------------------- */
+.blockListLiquidity {
+    margin: 15px 0px;
+}
+.blockListLiquidity .liquidityItem {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+.blockListLiquidity .liquidityItem.noData {
+    justify-content: center;
+}
+.blockListLiquidity .liquidityItem.noConnect {
+    justify-content: center;
+}
+.blockListLiquidity .textNoData {
+    color: #AFAFAF;
+    font-family: FONT_SEMIBOLD;
+    font-size: 13px;
+    text-align: center;
+    line-height: 18px;
+}
+/* ---------------------- BLOCK AND INPUT ---------------------- */
+.blockAndInput {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.itemAnd {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+.imgAnd {
+    width: 25px;
+    height: 25px;
+}
+/* ---------------------- BLOCK SELECT ---------------------- */
+.blockSelect {
+    margin: 15px 0px 5px 0px;
+}
+.blockSelect .textLabel {
+    font-size: 13px;
+    font-family: FONT_BOLD;
+    margin: 0px 0px 10px 0px;
+}
+.blockSelect .selectItem {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(136,187,190,0.25);
+    padding: 0px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.blockSelect .toolDrop {
+    width: 12px;
+    height: 12px;
+}
+.blockSelect .textSelect {
+    font-size: 12px;
+    font-family: FONT_BOLD;
+    color: #88BBBE;
+}
+/* ---------------------- BLOCK CONTENT INFO ---------------------- */
+.blockContentInfo {
+    margin: 20px 0px 5px 0px;
+}
+.blockContentInfo .textLabel {
+    font-size: 13px;
+    font-family: FONT_BOLD;
+    margin: 0px 0px 10px 0px;
+}
+/* ---------------------- BLOCK ROUTE ---------------------- */
+.blockRoute {
+    background: rgba(136,187,190,0.25);
+    border-radius: 10px;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.blockRoute .routeNumber {
+    background: #88BBBE;
+    color: #FFF;
+    padding: 10px 7.5px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-family: FONT_BOLD;
+    margin: 0px 0px 15px 0px;
+    position: relative;
+}
+.blockRoute .routeNumber:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #88BBBE;
+    position: absolute;
+    bottom: -5px;
+}
+.blockRoute .routeText {
+    color: #88BBBE;
+    font-size: 12px;
+    font-family: FONT_BOLD;
+}
+/* ---------------------- BLOCK WARNING ---------------------- */
+.blockWarning {
+    margin: 15px 0px 0px 0px;
+}
+.blockWarning .textWarning {
+    font-size: 12px;
+    color: #F2B92F;
+    font-family: FONT_BOLD;
+    text-align: center;
+    line-height: 18px;
+}
+/* ---------------------- BLOCK CONTENT NOTE ---------------------- */
+.blockContentNote {
+    background: rgba(136,187,190,0.25);
+    margin: 15px 0px;
+    border-radius: 12px;
+    padding: 15px 15px 10px 15px;
+}
+.blockContentNote .noteTitle {
+    font-family: FONT_BOLD;
+    color: #9C2F26;
+    margin: 0px 0px 12.5px 0px;
+    font-size: 13px;
+}
+.blockContentNote .noteTextTitle {
+    font-size: 12px;
+    font-family: FONT_BOLD;
+    margin: 0px 0px 10px 0px;
+}
+.blockContentNote .noteTextContent {
+    font-size: 12px;
+    color: #888;
+    margin: 0px 0px 12.5px 0px;
+    line-height: 16px;
+    font-family: FONT_SEMIBOLD;
+}
+/* ---------------------- BLOCK SELECT TOKEN ---------------------- */
+.blockSelectToken {
+    margin: 5px 0px 20px 0px;
+}
+.blockSelectToken .textLabel {
+    font-size: 13px;
+    font-family: FONT_BOLD;
+    margin: 0px 0px 10px 0px;
+}
+.blockSelectToken .selectItem {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(136,187,190,0.25);
+    padding: 0px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.blockSelectToken .selectToken {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.blockSelectToken .imgToken {
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px 0px -5px;
+}
+.blockSelectToken .toolDrop {
+    width: 12px;
+    height: 12px;
+}
+.blockSelectToken .textToken {
+    font-size: 12px;
+    font-family: FONT_BOLD;
+    color: #88BBBE;
+}
+
+/* ---------------------- BLOCK WRAP PAGE HOME ---------------------- */
+.wrapPageHome {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.wrapPageHome .containerHome {
+    max-width: 800px;
+}
+
+/* ---------------------- BLOCK BANNER ---------------------- */
+.blockBanner {
+    margin: 20px 0px 0px 0px;
+}
+.blockBanner .imgBanner {
+    width: 100%;
+}
+
+/* ---------------------- BLOCK CONTENT HOME ---------------------- */
+.blockContentHome {
+    margin: 35px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.blockContentHome .blockItemContent {
+    width: calc(100% / 2 - 20px);
+    background: #FFF;
+    margin: 0px 0px 20px 0px;
+    border-radius: 18px;
+}
+.blockContentHome .itemContentHeader {
+    border-bottom : 1px solid rgb(231, 227, 235);
+    padding: 20px;
+}
+.blockContentHome .textHeader {
+    font-size: 16px;
+    font-family: FONT_BLACK;
+    
+}
+
+/* ---------------------- BLOCK CONTENT FARM STAKING ---------------------- */
+.blockContentFS {
+    padding: 20px 20px 10px 20px;
+    margin: 10px 0px 0px 0px;
+    position: relative;
+}
+.blockContentFS .tokenInfo {
+    margin: 0px 0px 30px 0px;
+}
+.blockContentFS .textTitle {
+    color: #74A9D6;
+    margin: 0px 0px 5px 0px;
+    font-family: FONT_EXTRABOLD;
+}
+.blockContentFS .textStatus {
+    color: #afafaf;
+    font-family: FONT_BOLD;
+    margin: 0px 0px 10px 0px;
+    font-size: 12px;
+}
+.blockContentFS .textMoney {
+    color: #88BBBE;
+    font-family: FONT_BOLD;
+    margin: 0px 0px 5px 0px;
+}
+.blockContentFS .imgInfo {
+    position: absolute;
+    top : 20px;
+    right: 0px;
+}
+.blockContentFS .imgContent {
+    width: calc(974px / 5);
+    height: calc(769px / 5);
+}
+
+/* ---------------------- BLOCK CONTENT ANOUNCEMENT ---------------------- */
+.blockContentAC {
+    padding: 15px 10px;
+    position: relative;
+}
+.blockContentAC .postAC {
+    max-height: 350px;
+    overflow-x : hidden;
+    overflow-y: auto;
+    padding: 5px 10px;
+}
+.blockContentAC iframe {
+    width: 100%;
+}
+/* ---------------------- BLOCK CONTENT FARM STAKING REVENUE ---------------------- */
+.blockContentFSR {
+    padding: 10px 20px;
+    margin: 10px 0px 0px 0px;
+    position: relative;
+}
+.blockContentFSR .revenueItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 0px 15px 0px;
+}
+.blockContentFSR .itemLabel {
+    font-family: FONT_BOLD;
+    font-size: 13px;
+}
+.blockContentFSR .itemContent {
+    font-family: FONT_BOLD;
+    font-size: 13px;
+    color: #88BBBE;
+}
+/* ---------------------- BLOCK CONTENT TOTAL VALUE ---------------------- */
+.blockContentTV {
+    padding: 10px 20px;
+    margin: 10px 0px 0px 0px;
+    position: relative;
+}
+.blockContentTV .moneyTotal {
+    font-size: 30px;
+    font-family: FONT_BLACK;
+}
+.blockContentTV .moneyNote {
+    margin: 25px 0px 15px 0px;
+    color: #74A9D6;
+    font-family: FONT_BOLD;
+    font-size: 13px;
+}
+/* ---------------------- BLOCK BACKGROUND BUNNY ---------------------- */
+.backgroundBunny {
+   position: absolute;
+   top : 0px;
+   left: 0px;
+   width: 100%;
+   height: 100%;
+   overflow : hidden;
+   z-index: 1;
+}
+.backgroundBunny .imgBackground1 {
+    position: absolute;
+    z-index: 1;
+    right: -20px;
+    bottom: -20px;
+    margin: auto;
+    width: calc(974px / 3);
+    height: calc(769px / 3);
+    animation: moveRightImg 4s ease-in-out infinite;
+}
+.backgroundBunny .imgBackground2 {
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    top: 100px;
+    margin: auto;
+    width: calc(974px / 6);
+    height: calc(769px / 6);
+    animation: moveLeftImg 3s ease-in-out infinite;
+}
+.backgroundBunny .imgBackground3 {
+    position: absolute;
+    z-index: 1;
+    left: 200px;
+    top: 80px;
+    margin: auto;
+    width: calc(974px / 4);
+    height: calc(769px / 4);
+    animation: moveRightImg 2s ease-in-out infinite;
+}
+.backgroundBunny .imgBackground4 {
+    position: absolute;
+    z-index: 1;
+    left: 280px;
+    top: 400px;
+    margin: auto;
+    width: calc(974px / 14);
+    height: calc(769px / 14);
+    animation: moveLeftImg 6s ease-in-out infinite;
+}
+.backgroundBunny .imgBackground5 {
+    position: absolute;
+    z-index: 1;
+    right: 150px;
+    top: 375px;
+    margin: auto;
+    width: calc(974px / 9);
+    height: calc(769px / 9);
+    animation: moveRightImg 3.5s ease-in-out infinite;
+}
+.backgroundBunny .imgBackground6 {
+    position: absolute;
+    z-index: 1;
+    right: 60px;
+    bottom: 250px;
+    margin: auto;
+    width: calc(974px / 12);
+    height: calc(769px / 12);
+    animation: moveRightImg 3.5s ease-in-out infinite;
+}
+.backgroundBunny .imgBackground7 {
+    position: absolute;
+    z-index: 1;
+    left: 230px;
+    bottom: 160px;
+    margin: auto;
+    width: calc(974px / 8);
+    height: calc(769px / 8);
+    animation: moveLeftImg 3.5s ease-in-out infinite;
+}
+/* ---------------------- ANIMATION ---------------------- */
+@keyframes moveRightImg {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(5px, -10px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+@keyframes moveLeftImg {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(-5px, -10px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
