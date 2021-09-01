@@ -1,192 +1,618 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bunny NetWork</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/responsive.css">
 </head>
-<style>
-    html,
-    body,
-    div,
-    span,
-    applet,
-    object,
-    iframe,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    blockquote,
-    pre,
-    a,
-    abbr,
-    acronym,
-    address,
-    big,
-    cite,
-    code,
-    del,
-    dfn,
-    em,
-    img,
-    ins,
-    kbd,
-    q,
-    s,
-    samp,
-    small,
-    strike,
-    strong,
-    sub,
-    sup,
-    tt,
-    var,
-    b,
-    u,
-    i,
-    center,
-    dl,
-    dt,
-    dd,
-    ol,
-    ul,
-    li,
-    fieldset,
-    form,
-    label,
-    legend,
-    table,
-    caption,
-    tbody,
-    tfoot,
-    thead,
-    tr,
-    th,
-    td,
-    article,
-    aside,
-    canvas,
-    details,
-    embed,
-    figure,
-    figcaption,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    output,
-    ruby,
-    section,
-    summary,
-    time,
-    mark,
-    audio,
-    video {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-    }
-
-    article,
-    aside,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    menu,
-    nav,
-    section {
-        display: block;
-    }
-
-    body {
-        line-height: 1;
-    }
-
-    ol,
-    ul {
-        list-style: none;
-    }
-
-    blockquote,
-    q {
-        quotes: none;
-    }
-
-    blockquote:before,
-    blockquote:after,
-    q:before,
-    q:after {
-        content: '';
-        content: none;
-    }
-
-    table {
-        border-collapse: collapse;
-        border-spacing: 0;
-    }
-
-    a {
-        color: #000;
-    }
-
-    a:hover,
-    a:focus {
-        text-decoration: none;
-        color: #000;
-    }
-
-    input[type=checkbox] {
-        margin: 0px;
-    }
-
-    body {
-        position: relative;
-         -webkit-overflow-scrolling: touch;
-    }
-
-    .block {
-        height: calc(100vh - calc(100vh - 100%))
-        overflow: auto;
-    }
-
-    .blockA {
-        height: 200px;
-        background: red;
-        margin: 0px 0px 15px 0px;
-    }
-</style>
 
 <body>
+    <div class="fullWeb">
+        <div class="blockWrap">
+            <div class="blockHeader hdShow">
+                <div class="blockMenu">
+                    <img class="imgMenuOpen" src="images/icons/icMenuOpen.svg" />
+                    <img class="imgMenuClose icMenuActive" src="images/icons/icMenuClose.svg" />
+                </div>
+                <div class="blockLogo">
+                    <a href="#" class="linkLogo">
+                        <img class="imgLogo" src="images/icons/logo.png" />
+                        <p class="textLogo">BunnyDefiFinancial</p>
+                    </a>
+                </div>
+                <div class="blockConnect">
+                    <a href="#" class="linkConnect">
+                        <p class="textConnect">Connect Wallet</p>
+                    </a>
+                    <!-- <a href="#" class="linkAddress">
+                        <p class="textAddress">0xEBb6...0013</p>
+                    </a> -->
+                </div>
+            </div>
+            <div class="blockTab tabShow">
+                <div class="blockListTab">
+                    <div class="listTabItem active">
+                        <a href="" class="itemTab">
+                            <div class="imgTab">
+                                <img class="imgTabIcon" src="images/icons/icHome.png" />
+                            </div>
+                            <div class="textTab">
+                                <p class="contentTextTab">Home</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="listTabItem listTabDrop">
+                        <div class="itemTab">
+                            <div class="imgTab">
+                                <img class="imgTabIcon" src="images/icons/icTrade.png" />
+                            </div>
+                            <div class="textTab">
+                                <p class="contentTextTab">Trade</p>
+                            </div>
+                            <img class="imgTabDrop" src="images/icons/icDrop.png" />
+                        </div>
+                        <div class="itemChildTab">
+                            <a href="" class="itemTabChild active">
+                                <div class="textChild">
+                                    <p class="contentTextTabChild">Exchange</p>
+                                </div>
+                            </a>
+                            <a href="" class="itemTabChild">
+                                <div class="textChild">
+                                    <p class="contentTextTabChild">Staking</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="listTabItem">
+                        <a href="" class="itemTab">
+                            <div class="imgTab">
+                                <img class="imgTabIcon" src="images/icons/icFarm.png" />
+                            </div>
+                            <div class="textTab">
+                                <p class="contentTextTab">Farm</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="listTabItem">
+                        <a href="" class="itemTab">
+                            <div class="imgTab">
+                                <img class="imgTabIcon" src="images/icons/icPools.png" />
+                            </div>
+                            <div class="textTab">
+                                <p class="contentTextTab">Pools</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="listTabItem">
+                        <a href="" class="itemTab">
+                            <div class="imgTab">
+                                <img class="imgTabIcon" src="images/icons/icAudits.png" />
+                            </div>
+                            <div class="textTab">
+                                <p class="contentTextTab">Audits</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="listTabItem">
+                        <a href="" class="itemTab">
+                            <div class="imgTab">
+                                <img class="imgTabIcon" src="images/icons/icDocs.png" />
+                            </div>
+                            <div class="textTab">
+                                <p class="contentTextTab">Docs</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="listTabItem">
+                        <a href="" class="itemTab">
+                            <div class="imgTab">
+                                <img class="imgTabIcon" src="images/icons/icPriceGraph.png" />
+                            </div>
+                            <div class="textTab">
+                                <p class="contentTextTab">Price Graph</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="listTabItem listTabDrop">
+                        <div class="itemTab">
+                            <div class="imgTab">
+                                <img class="imgTabIcon" src="images/icons/icMore.png" />
+                            </div>
+                            <div class="textTab">
+                                <p class="contentTextTab">More</p>
+                            </div>
+                            <img class="imgTabDrop" src="images/icons/icDrop.png" />
+                        </div>
+                        <div class="itemChildTab">
+                            <a href="" class="itemTabChild">
+                                <div class="textChild">
+                                    <p class="contentTextTabChild">Test</p>
+                                </div>
+                            </a>
+                            <a href="" class="itemTabChild">
+                                <div class="textChild">
+                                    <p class="contentTextTabChild">Test</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="blockListTool active">
+                    <div class="listToolInfo">
+                        <div class="infoMoney">
+                            <img class="imgMoney" src="images/icons/logo.png" />
+                            <p class="textMoney">$25.489</p>
+                        </div>
+                        <div class="infoListSocial">
+                            <div class="socialItem">
+                                <a href="" class="itemSocial">
+                                    <img class="imgSocial" src="images/icons/icTelegram.png" />
+                                </a>
+                            </div>
+                            <div class="socialItem">
+                                <a href="" class="itemSocial">
+                                    <img class="imgSocial" src="images/icons/icTwitter.png" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listToolItem">
+                        <div class="itemTool">
+                            <div class="imgTool">
+                                <img class="imgToolIcon" src="images/icons/icSetting.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blockContent">
+                <div class="blockPage wrapPageTrade">
+                    <div class="blockSwapPage">
+                        <div class="pageItem active">
+                            <p class="textPageitem">Swap</p>
+                        </div>
+                        <div class="pageItem">
+                            <p class="textPageitem">Liquidity</p>
+                        </div>
+                    </div>
+                    <div class="blockBoxForm">
 
-    <div class="block">
-        <div class="blockA">20%</div>
-        <div class="blockA">40%</div>
-        <div class="blockA">60%</div>
-        <div class="blockA">80%</div>
-        <div class="blockA">90%</div>
-        <div class="blockA">100%</div>
-        <div class="blockA">120%</div>
-    </div>
-    <script>
-        window.addEventListener('resize', () => {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        });
-    </script>
+                        <div class="blockHeaderForm">
+                            <div class="infoHeader">
+                                <p class="titleHeader">Exchange</p>
+                                <p class="labelHeader">Trade tokens in an instant</p>
+                            </div>
+                            <div class="toolHeader">
+                                <div class="itemTool">
+                                    <div class="imgTool">
+                                        <img class="imgToolIcon" src="images/icons/icSetting.png" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blockContentForm">
+                            <div class="blockInput">
+                                <div class="headerInput">
+                                    <div class="infoInput">
+                                        <p class="titleInput">From</p>
+                                    </div>
+                                    <div class="textBalance">
+                                        <p class="balanceText">Balance : 143412.321</p>
+                                    </div>
+                                </div>
+                                <div class="contentInput">
+                                    <div class="inputText">
+                                        <input class="inputForm" placeholder="0.0" />
+                                    </div>
+                                    <div class="toolInput">
+                                        <div class="itemTool">
+                                            <div class="imgTool">
+                                                <img class="imgToolIcon icToken" src="images/icons/logo.png" />
+                                            </div>
+                                            <div class="textTool">
+                                                <p class="toolText">BNB</p>
+                                            </div>
+                                            <div class="dropTool">
+                                                <img class="imgToolIcon icDrop" src="images/icons/icDrop.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blockSwapInput">
+                                <div class="itemSwap">
+                                    <img class="imgSwap" src="images/icons/icSwap.png" />
+                                </div>
+                            </div>
+                            <div class="blockInput">
+                                <div class="headerInput">
+                                    <div class="infoInput">
+                                        <p class="titleInput">To</p>
+                                    </div>
+                                    <div class="textBalance">
+                                        <p class="balanceText">Balance : 143412.321</p>
+                                    </div>
+                                </div>
+                                <div class="contentInput">
+                                    <div class="inputText">
+                                        <input class="inputForm" placeholder="0.0" />
+                                    </div>
+                                    <div class="toolInput">
+                                        <div class="itemTool">
+                                            <div class="textTool">
+                                                <p class="toolText">Select Token</p>
+                                            </div>
+                                            <div class="dropTool">
+                                                <img class="imgToolIcon icDrop" src="images/icons/icDrop.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blockInfoTrans">
+                                <div class="infoItem">
+                                    <div class="labelInfo">
+                                        <p class="labelText">Price</p>
+                                    </div>
+                                    <div class="contentInfo">
+                                        <div class="toolText">
+                                            <img class="imgToolIcon" src="images/icons/icChange.png" />
+                                        </div>
+                                        <p class="contentText">1.86311 BNB per BUN</p>
+                                    </div>
+                                </div>
+                                <div class="infoItem">
+                                    <div class="labelInfo">
+                                        <p class="labelText">Minimum received</p>
+                                    </div>
+                                    <div class="contentInfo">
+                                        <p class="contentText">509.5 BUN</p>
+                                    </div>
+                                </div>
+                                <div class="infoItem">
+                                    <div class="labelInfo">
+                                        <p class="labelText">Price impact</p>
+                                    </div>
+                                    <div class="contentInfo">
+                                        <p class="contentText">0.30%</p>
+                                    </div>
+                                </div>
+                                <div class="infoItem">
+                                    <div class="labelInfo">
+                                        <p class="labelText">Liquidity provider fee</p>
+                                    </div>
+                                    <div class="contentInfo">
+                                        <p class="contentText">242.2 BNB</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blockButton">
+                                <button class="itemButton">
+                                    <p class="textButton">Connect Wallet</p>
+                                </button>
+                            </div>
+                        </div>
+
+
+
+
+                      
+                        <!-- <div class="blockHeaderForm">
+                            <div class="infoHeader">
+                                <p class="titleHeader">Your Liquidity</p>
+                            </div>
+                            <div class="toolHeader">
+                                <div class="itemTool">
+                                    <div class="imgTool">
+                                        <img class="imgToolIcon" src="images/icons/icAdd.png" />
+                                    </div>
+                                </div>
+                                <div class="itemTool">
+                                    <div class="imgTool">
+                                        <img class="imgToolIcon" src="images/icons/icImport.png" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blockContentForm">
+                            <div class="blockListLiquidity">
+                                <div class="liquidityItem noData">
+                                    <p class="textNoData">No liquidity found.</p>
+                                </div>
+                                <div class="liquidityItem noConnect">
+                                    <p class="textNoData">Connect to a wallet to view your liquidity.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        
+                        
+                        <div class="blockHeaderForm">
+                            <div class="infoHeader">
+                                <p class="titleHeader">Add Liquidity</p>
+                                <p class="labelHeader">Create/Add liquidity</p>
+                            </div>
+                            <div class="toolHeader">
+                                <div class="itemTool">
+                                    <div class="imgTool">
+                                        <img class="imgToolIcon" src="images/icons/icSetting.png" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="toolBack">
+                                <img class="imgToolBack" src="images/icons/icToolBack.png" />
+                            </div>
+                        </div>
+                        <div class="blockContentForm">
+                            <div class="blockInput">
+                                <div class="headerInput">
+                                    <div class="infoInput">
+                                        <p class="titleInput">Input</p>
+                                    </div>
+                                    <div class="textBalance">
+                                        <p class="balanceText">Balance : 143412.321</p>
+                                    </div>
+                                </div>
+                                <div class="contentInput">
+                                    <div class="inputText">
+                                        <input class="inputForm" placeholder="0.0" />
+                                    </div>
+                                    <div class="toolInput">
+                                        <div class="itemTool">
+                                            <div class="imgTool">
+                                                <img class="imgToolIcon icToken" src="images/icons/logo.png" />
+                                            </div>
+                                            <div class="textTool">
+                                                <p class="toolText">BNB</p>
+                                            </div>
+                                            <div class="dropTool">
+                                                <img class="imgToolIcon icDrop" src="images/icons/icDrop.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blockAndInput">
+                                <div class="itemAnd">
+                                    <img class="imgAnd" src="images/icons/icAdd.png" />
+                                </div>
+                            </div>
+                            <div class="blockInput">
+                                <div class="headerInput">
+                                    <div class="infoInput">
+                                        <p class="titleInput">Input</p>
+                                    </div>
+                                    <div class="textBalance">
+                                        <p class="balanceText">Balance : 0.00</p>
+                                    </div>
+                                </div>
+                                <div class="contentInput">
+                                    <div class="inputText">
+                                        <input class="inputForm" placeholder="0.0" />
+                                    </div>
+                                    <div class="toolInput">
+                                        <div class="itemTool">
+                                            <div class="textTool">
+                                                <p class="toolText">Select Token</p>
+                                            </div>
+                                            <div class="dropTool">
+                                                <img class="imgToolIcon icDrop" src="images/icons/icDrop.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blockSelect">
+                                <div class="selectLabel">
+                                    <p class="textLabel">Select a pool</p>
+                                </div>
+                                <div class="selectItem">
+                                    <p class="textSelect">0xa69b...6d0e</p>
+                                    <div class="selectTool">
+                                        <img class="toolDrop" src="images/icons/icDrop.png" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blockContentInfo">
+                                <div class="contentInfoLabel">
+                                    <p class="textLabel">Price and pool share</p>
+                                </div>
+                                <div class="blockRoute">
+                                   <div class="routeItem">
+                                       <p class="routeNumber">161.286</p>
+                                       <p class="routeText">BUN per BNB</p>
+                                   </div>
+                                   <div class="routeItem">
+                                        <p class="routeNumber">0.00620018</p>
+                                        <p class="routeText">BNB per BUN</p>
+                                    </div>
+                                    <div class="routeItem">
+                                        <p class="routeNumber">99.94%</p>
+                                        <p class="routeText">Share of Pool</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blockContentNote">
+                                <p class="noteTitle">Liquidity pool has not been created yet.</p>
+                                <p class="noteTextTitle">For developers</p>
+                                <p class="noteTextContent">• Creating a liquidity pool can help your project and community set up free venues for trading your tokens, allowing you to better focus on business and technical development.</p>
+                                <p class="noteTextTitle">For market makers</p>
+                                <p class="noteTextContent">• You can use the pool to implement flexible market making rules, make transaction fee adjustments, and configure other parameters to help you earn more!</p>
+                            </div>
+                            <div class="blockWarning">
+                                <p class="textWarning">By adding liquidity you'll earn 0.3% of all trades on this pair proportional to your share of the pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity.</p>
+                            </div>
+                            <div class="blockButton">
+                                <button class="itemButton">
+                                    <p class="textButton">Connect Wallet</p>
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <div class="blockHeaderForm">
+                            <div class="infoHeader">
+                                <p class="titleHeader">Import Pool</p>
+                                <p class="labelHeader">Import liquidity</p>
+                            </div>
+                            <div class="toolHeader">
+                                <div class="itemTool">
+                                    <div class="imgTool">
+                                        <img class="imgToolIcon" src="images/icons/icSetting.png" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="toolBack">
+                                <img class="imgToolBack" src="images/icons/icToolBack.png" />
+                            </div>
+                        </div>
+                        <div class="blockContentForm">
+                            <div class="blockSelectToken">
+                                <div class="selectLabel">
+                                    <p class="textLabel">Select a Token</p>
+                                </div>
+                                <div class="selectItem">
+                                    <div class="selectToken">
+                                        <img class="imgToken" src="images/icons/logo.png" />
+                                        <p class="textToken">BUN</p>
+                                    </div>
+                                    <div class="selectTool">
+                                        <img class="toolDrop" src="images/icons/icDrop.png" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blockSelectToken">
+                                <div class="selectLabel">
+                                    <p class="textLabel">Select a Token</p>
+                                </div>
+                                <div class="selectItem">
+                                    <div class="selectToken">
+                                        <p class="textToken">Select Token</p>
+                                    </div>
+                                    <div class="selectTool">
+                                        <img class="toolDrop" src="images/icons/icDrop.png" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blockWarning">
+                                <p class="textWarning">You don’t have liquidity in this pool 0xA480...7e51</p>
+                                <p class="textWarning">You don’t have liquidity in this pool 0xA480...7e51</p>
+                                <p class="textWarning">You don’t have liquidity in this pool 0xA480...7e51</p>
+                                <p class="textWarning">You don’t have liquidity in this pool 0xA480...7e51</p>
+                            </div>
+                            <div class="blockButton">
+                                <button class="itemButton">
+                                    <p class="textButton">Connect Wallet</p>
+                                </button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="backgroundBunny">
+                        <img class="imgBackground1" src="images/backgrounds/bgBunny1.png" />
+                        <img class="imgBackground2" src="images/backgrounds/bgCoin1.png" />
+                        <img class="imgBackground3" src="images/backgrounds/bgCoin2.png" />
+                        <img class="imgBackground4" src="images/backgrounds/bgCoin4.png" />
+                        <img class="imgBackground5" src="images/backgrounds/bgCoin3.png" />
+                        <img class="imgBackground6" src="images/backgrounds/bgCoin4.png" />
+                        <img class="imgBackground7" src="images/backgrounds/bgCoin3.png" />
+                    </div>
+                </div>
+
+                <!-- <div class="blockPage wrapPageHome">
+                    <div class="containerHome">
+                        <div class="blockBanner">
+                            <img class="imgBanner" src="images/backgrounds/bgBanner.png" />
+                        </div>
+                        <div class="blockContentHome">
+                            <div class="blockItemContent">
+                                <div class="itemContentHeader">
+                                    <p class="textHeader">Farm & Staking</p>
+                                </div>
+                                <div class="itemContentInfo">
+                                    <div class="blockContentFS">
+                                        <div class="tokenInfo">
+                                            <p class="textTitle">BUNNY to Havest</p>
+                                            <p class="textStatus">LOCKED</p>
+                                            <p class="textMoney">~ $0.00</p>
+                                        </div>
+                                        <div class="tokenInfo">
+                                            <p class="textTitle">BUNNY to Wallet</p>
+                                            <p class="textStatus">LOCKED</p>
+                                            <p class="textMoney">~ $0.00</p>
+                                        </div>
+                                        <div class="imgInfo">
+                                            <img class="imgContent" src="images/backgrounds/bgBunny1.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blockItemContent">
+                                <div class="itemContentHeader">
+                                    <p class="textHeader">Anouncements</p>
+                                </div>
+                                <div class="itemContentInfo">
+                                    <div class="blockContentAC">
+                                        <div class="postAC">
+                                            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FBunnyDefiFinancial%2Fposts%2F142944027970589&show_text=true&width=500" width="500" height="664" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blockItemContent">
+                                <div class="itemContentHeader">
+                                    <p class="textHeader">Farm & Staking Revenue</p>
+                                </div>
+                                <div class="itemContentInfo">
+                                    <div class="blockContentFSR">
+                                        <div class="revenueItem">
+                                            <p class="itemLabel">Marketcap</p>
+                                            <p class="itemContent">$258</p>
+                                        </div>
+                                        <div class="revenueItem">
+                                            <p class="itemLabel">Total Minted</p>
+                                            <p class="itemContent">3,024,458</p>
+                                        </div>
+                                        <div class="revenueItem">
+                                            <p class="itemLabel">Total Burned</p>
+                                            <p class="itemContent">962</p>
+                                        </div>
+                                        <div class="revenueItem">
+                                            <p class="itemLabel">Circulating Supply</p>
+                                            <p class="itemContent">3,033,466</p>
+                                        </div>
+                                        <div class="revenueItem">
+                                            <p class="itemLabel">New BUNNY/Block</p>
+                                            <p class="itemContent">10</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blockItemContent">
+                                <div class="itemContentHeader">
+                                    <p class="textHeader">Total Value</p>
+                                </div>
+                                <div class="itemContentInfo">
+                                    <div class="blockContentTV">
+                                        <p class="moneyTotal">$7405.89</p>
+                                        <P class="moneyNote">Across all Farms and Pools</P>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
