@@ -17,4 +17,27 @@ $(document).ready(function () {
     new Parallax(imgTrade);
     var imgWallet = document.getElementById('imgWallet');
     new Parallax(imgWallet);
+    var imgNFT = document.getElementById('imgNFT');
+    new Parallax(imgNFT);
+    var imgToken = document.getElementById('imgToken');
+    new Parallax(imgToken);
+    var imgFeatures = document.getElementById('imgFeatures');
+    new Parallax(imgFeatures);
+    // MENU MOBILE
+    let menuMB = false;
+    $('.blockButtonMenuMobile').click(function () {
+        menuMB = !menuMB;
+        if (menuMB === true) {
+            $('.blockButtonMenuMobile').addClass('active');
+            $('.blockMenuMobi').addClass('active');
+            $('html').addClass('no-scroll');
+            $('body').addClass('no-scroll');
+        }
+        else {
+            $('.blockButtonMenuMobile').removeClass('active');
+            $('.blockMenuMobi').removeClass('active');
+            $('html').removeClass('no-scroll');
+            $('body').removeClass('no-scroll');
+        }
+    })
 });
