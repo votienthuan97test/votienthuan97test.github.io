@@ -14,7 +14,6 @@ $(document).ready(function () {
         $('.blockMenuMobile').removeClass('active');
         $("body").css("overflow-y", "overlay");
         $("html").css("overflow-y", "overlay");
-        $('#btnMenuMobile').removeClass('btnFixedScroll');
       }
     });
     // SEARCH SHOW/HIDE OPTION
