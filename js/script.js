@@ -107,4 +107,13 @@ $(document).ready(function () {
         }
       ]
     });
+    // FIXED MENU
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() < $(".blockHeader").position().top + 5) {
+        $('#btnMenuMobile').removeClass('btnFixedScroll');
+      }
+      else {
+        $('#btnMenuMobile').addClass('btnFixedScroll');
+      }
+    });
 });
