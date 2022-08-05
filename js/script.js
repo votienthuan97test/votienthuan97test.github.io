@@ -6,14 +6,15 @@ $(document).ready(function () {
       if (menuMobile === true) {
         $('.__imgMenuMobile').addClass('active');
         $('.blockMenuMobile').addClass('active');
-        $("body").css("overflow", "hidden");
-        $("html").css("overflow", "hidden");
+        $("body").css("overflow-y", "hidden");
+        $("html").css("overflow-y", "hidden");
       }
       else {
         $('.__imgMenuMobile').removeClass('active');
         $('.blockMenuMobile').removeClass('active');
-        $("body").css("overflow", "overlay");
-        $("html").css("overflow", "overlay");
+        $("body").css("overflow-y", "overlay");
+        $("html").css("overflow-y", "overlay");
+        $('#btnMenuMobile').removeClass('btnFixedScroll');
       }
     });
     // SEARCH SHOW/HIDE OPTION
