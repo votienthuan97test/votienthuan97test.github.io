@@ -1,3 +1,5 @@
+
+
 /* ---------------------- FONT ---------------------- */
 @font-face {
     font-family: FONT_MEDIUM;
@@ -554,8 +556,8 @@ html, body {
     min-height: 950px;
     margin: -25px 0px 0px 0px;
     padding: calc(50px + 60px) 0px 0px 0px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(32.29%, #E3F8F1), to(rgba(255, 255, 255, 0)));
     background: -o-linear-gradient(top, #E3F8F1 32.29%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(32.29%, #E3F8F1), to(rgba(255, 255, 255, 0)));
     background: linear-gradient(180deg, #E3F8F1 32.29%, rgba(255, 255, 255, 0) 100%); 
 }
 .blockContentTour5 {
@@ -636,8 +638,8 @@ html, body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(51.04%, rgba(0, 0, 0, 0)), color-stop(88.54%, rgba(0, 0, 0, 0.5)));
     background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 51.04%, rgba(0, 0, 0, 0.5) 88.54%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(51.04%, rgba(0, 0, 0, 0)), color-stop(88.54%, rgba(0, 0, 0, 0.5)));
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 51.04%, rgba(0, 0, 0, 0.5) 88.54%);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1285,8 +1287,11 @@ html, body {
 }
 .popularTour .__slide .blockImgRight .__boxImg .__content {
     position: absolute;
-    bottom: 0px;
-    background: #D31E4B;
+    top: 0px;
+    left: 0px;
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 51.04%, rgba(0, 0, 0, 0.6) 88.54%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(51.04%, rgba(0, 0, 0, 0)), color-stop(88.54%, rgba(0, 0, 0, 0.6)));
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 51.04%, rgba(0, 0, 0, 0.6) 88.54%);
     padding: 15px 10px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1294,18 +1299,15 @@ html, body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     width: 100%;
-    -webkit-transform: translateY(100%);
-        -ms-transform: translateY(100%);
-            transform: translateY(100%);
     -webkit-transition: 0.3s ease-in-out;
     -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
-    max-height: 100%;
-    overflow: auto;
+    height: 100%;
+    opacity: 0;
 }
 .popularTour .__slide .blockImgRight .__boxImg .__content .__text {
     color: #FFF;
@@ -1315,10 +1317,7 @@ html, body {
     text-align: center;
 }
 .popularTour .__slide .__item .blockImgRight .__boxImg:hover .__content {
-    -webkit-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-            transform: translateY(0%);
-    will-change: transform;
+    opacity: 1;
     -webkit-transition: 0.3s ease-in-out;
     -o-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
@@ -1359,8 +1358,8 @@ html, body {
 .popularTour .__slide .blockImgLeft .__content {
     position: absolute;
     top: 0px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(51.04%, rgba(0, 0, 0, 0)), color-stop(88.54%, rgba(0, 0, 0, 0.5)));
     background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 51.04%, rgba(0, 0, 0, 0.5) 88.54%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(51.04%, rgba(0, 0, 0, 0)), color-stop(88.54%, rgba(0, 0, 0, 0.5)));
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 51.04%, rgba(0, 0, 0, 0.5) 88.54%);
     padding: 15px 10px;
     display: -webkit-box;
@@ -1380,29 +1379,22 @@ html, body {
     height: 100%;
     padding: 25px;
     border-radius: 12px;
+    opacity: 0;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.popularTour .__slide .blockImgLeft:hover .__content {
+    opacity: 1;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .popularTour .__slide .blockImgLeft .__content .__text {
     color: #FFF;
     font-size: 20px;
     font-family: FONT_BOLD;
     margin: 0px 0px 12px 0px;
-}
-.popularTour .__slide .blockImgLeft .__content .__listStar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin: 0px 0px 12px 0px;
-}
-.popularTour .__slide .blockImgLeft .__content .__listStar .__img {
-    width: 17px;
-    height: 17px;
-    margin: 0px 5px 0px 0px;
 }
 .popularTour .__slide .blockImgLeft .__content .__des {
     color: #FFF;
@@ -1496,6 +1488,16 @@ html, body {
         -ms-flex-pack: center;
             justify-content: center;
     margin: 0px 30px 30px 0px;
+    cursor: pointer;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.blockWhyChoose .__listItem .__item:hover {
+    background: rgba(0,0,0,0.05);
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .blockWhyChoose .__listItem .__item:nth-child(3n) {
     margin: 0px 0px 30px 0px;
@@ -1507,6 +1509,9 @@ html, body {
     width: 65px;
     height: 65px;
     margin: 0px 0px 25px 0px;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 .blockWhyChoose .__listItem .__item .__text {
     color: #FFF;
@@ -1552,19 +1557,18 @@ html, body {
 .blockFooter .__listMenu .__item .__listLink .__link {
     position: relative;
 }
-.blockFooter .__listMenu .__item .__listLink .__link::before {
-    position: absolute;
-    content: '';
-    -webkit-transition: 0.3s ease-in-out;
-    -o-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
-}
 .blockFooter .__listMenu .__item .__listLink .__link .__text {
     font-size: 16px;
     line-height: 32px;
-    -webkit-transition: 0.3s ease-in-out;
-    -o-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+.blockFooter .__listMenu .__item .__listLink .__link:hover .__text {
+    color: rgba(255,255,255,0.75);
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 .blockFooter .__listInfo {
     width: calc(100% / 3 - 20px);
@@ -1672,6 +1676,23 @@ html, body {
     color: #FFF;
     font-family: FONT_BOLD;
     text-transform: capitalize;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.blockFooter .__listContact .__boxContact .__button:hover {
+    -webkit-filter: brightness(1.1);
+            filter: brightness(1.1);
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.blockFooter .__listContact .__boxContact .__button:active {
+    -webkit-filter: brightness(0.9);
+            filter: brightness(0.9);
+    -webkit-transition: 0.15s ease-in-out;
+    -o-transition: 0.15s ease-in-out;
+    transition: 0.15s ease-in-out;
 }
 .blockFooter .__itemSocial .__link {
     margin: 0px 10px;
@@ -1750,12 +1771,17 @@ html, body {
             justify-content: center;
     border-radius: 8px;
     background: #048449;
+    border: 2px solid transparent;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 .blockButtonMenuMobile.btnFixedScroll {
     top : 15px;
-    -webkit-transition: 0.4s cubic-bezier(0.66, 0, 0.15,1);
-    -o-transition: 0.4s cubic-bezier(0.66, 0, 0.15,1);
-    transition: 0.4s cubic-bezier(0.66, 0, 0.15,1);
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border: 2px solid rgba(255,255,255,0.55);
 }
 .blockButtonMenuMobile .__imgMenuMobile {
     width: 25px;
