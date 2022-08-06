@@ -209,12 +209,7 @@
         margin: 0px;
     }
     .popularTour .__slide .__item .blockImgRight .__boxImg .__content {
-        -webkit-transform: translateY(0%);
-            -ms-transform: translateY(0%);
-                transform: translateY(0%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(51.04%, rgba(0, 0, 0, 0)), color-stop(88.54%, rgba(0, 0, 0, 0.6)));
-        background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 51.04%, rgba(0, 0, 0, 0.6) 88.54%);
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 51.04%, rgba(0, 0, 0, 0.6) 88.54%);
+        opacity: 1;
         height: 100%;
         -webkit-box-pack: end;
             -ms-flex-pack: end;
@@ -253,26 +248,29 @@
         width: 100%;
     }
     .blockFooter .blockFooterWrap {
-        -webkit-box-orient: vertical;
+        -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding: 60px 30px;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: start;
-            -ms-flex-pack: start;
-                justify-content: flex-start;
     }
     .blockFooter .__listMenu {
-        width: 100%;
+        width: calc(50% - 20px);
     }
     .blockFooter .__listInfo {
-        width: 100%;
+        width: calc(50% - 20px);
     }
     .blockFooter .__listContact {
-        width: 100%;
+        width: calc(50% - 20px);
+        margin: 30px 0px 0px 0px;
+    }
+    .popularTour .__slide .blockImgLeft .__content {
+        opacity: 1;
     }
 }
 @media screen and (orientation:landscape) and (width: 1024px) {
@@ -292,7 +290,7 @@
         padding: 0px 15px;
     }
     .blockButtonMenuMobile {
-        right: 10px;
+        right: 12.5px;
     }
     .blockListTour .__listTour .__item .__name {
         min-height: 90px;
@@ -320,10 +318,10 @@
         font-size: 12px;
     }
     .blockListTour .__listTour .__price .__priceDefault .__text {
-        font-size: 14px;
+        font-size: 13px;
     }
     .blockListTour .__listTour .__price .__priceSale .__text {
-        font-size: 17px;
+        font-size: 16px;
     }
     .blockListTour .__listTour .__content .__listInfo .__itemInfo {
         width: 100%;
@@ -336,15 +334,6 @@
     }
     .blockSearch .blockSearchWrap {
         width: calc(100% - 60px);
-    }
-    .blockWhyChoose .__listItem .__item {
-        width: calc(100% / 2 - 20px);
-    }
-    .blockWhyChoose .__listItem .__item:nth-child(3n) {
-        margin: 0px 30px 30px 0px;
-    }
-    .blockWhyChoose .__listItem .__item:nth-child(2n) {
-        margin: 0px 0px 30px 0px;
     }
     .blockWhyChoose .__listItem {
         margin: 25px 0px;
@@ -371,6 +360,46 @@
         height: 14px;
         margin: 5px 10px 0px 0px;
     }
+    .blockFooter .__listContact {
+        width: 100%;
+        margin: 25px 0px 0px 0px;
+    }
+    .blockFooter .__listContact .__item .__title {
+        text-align: center;
+    }
+    .blockFooter .__listContact .__item .__listContent {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    .blockFooter .__listContact .__item .__content .__text {
+        text-align: center;
+    }
+    .blockFooter .__listContact .__item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
 }
 @media screen and (orientation:landscape) and (max-width: 992px) {
 
@@ -383,16 +412,6 @@
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
-    }
-    .blockListTour .__listTour .__item {
-        width: 100%;
-        margin: 0px 0px 25px 0px;
-    }
-    .blockListTour .__listTour .__item:nth-child(3n) {
-        margin: 0px 0px 25px 0px;
-    }
-    .blockListTour .__listTour .__item:nth-child(2n) {
-        margin: 0px 0px 25px 0px;
     }
     .blockSearch .__title .__text.textBig {
         font-size: 24px;
@@ -438,8 +457,8 @@
         width: 22.5px;
     }
     .blockWeTour .__title .__text.textBig {
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 20px;
+        line-height: 28px;
         margin: 0px 0px 15px 0px;
     }
     .blockWeTour .__title .__text {
@@ -449,30 +468,28 @@
         font-size: 12px;
     }
     .blockListTour .__title .__text.textBig {
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 20px;
+        line-height: 28px;
         margin: 0px 0px 15px 0px;
     }
     .blockListTour .__title .__text {
         font-size: 12px;
     }
     .blockWhyChoose .__title .__text.textBig {
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 20px;
+        line-height: 28px;
         margin: 0px 0px 15px 0px;
     }
     .blockWhyChoose .__title .__text {
         font-size: 12px;
     }
     .blockWhyChoose .__listItem .__item {
-        width: calc(100% - 20px);
-        margin: 0px 0px 30px 0px;
+        padding: 0px 15px;
     }
-    .blockWhyChoose .__listItem .__item:nth-child(3n) {
-        margin: 0px 0px 30px 0px;
-    }
-    .blockWhyChoose .__listItem .__item:nth-child(2n) {
-        margin: 0px 0px 30px 0px;
+    .blockWhyChoose .__listItem .__item .__text {
+        font-size: 16px;
+        line-height: 24px;
+        height: 55px;
     }
 }
 @media screen and (max-width: 640px) {
@@ -565,12 +582,42 @@
         margin: 0px 3px 0px 0px;
     }
     .blockWhyChoose .__listItem .__item .__img {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
     }
     .blockWhyChoose .__listItem .__item .__text {
         font-size: 14px;
         line-height: 20px;
+    }
+    .popularTour .__slide .blockImgLeft {
+        margin: 0px 0px 20px 0px;
+    }
+    .blockListTour .__listTour .__item {
+        width: 100%;
+        margin: 0px 0px 25px 0px;
+    }
+    .blockListTour .__listTour .__item:nth-child(3n) {
+        margin: 0px 0px 25px 0px;
+    }
+    .blockListTour .__listTour .__item:nth-child(2n) {
+        margin: 0px 0px 25px 0px;
+    }
+    .blockWhyChoose .__listItem .__item {
+        width: calc(100% / 2 - 15px);
+        margin: 0px 15px 20px 0px;
+    }
+    .blockWhyChoose .__listItem .__item:nth-child(3n) {
+        margin: 0px 15px 20px 0px;
+    }
+    .blockWhyChoose .__listItem .__item:nth-child(2n) {
+        margin: 0px 0px 20px 0px;
+    }
+    .blockFooter .__listMenu {
+        width: 100%;
+    }
+    .blockFooter .__listInfo {
+        width: 100%;
+        margin: 30px 0px 0px 0px;
     }
 }
 @media screen and (orientation:landscape) and (max-width: 568px) {
@@ -600,6 +647,12 @@
     .blockSearch .__search .__item.select .__img {
         width: 12px;
         height: 12px;
+    }
+    .blockFooter .blockFooterWrap {
+        padding: 60px 30px 20px 30px;
+    }
+    .blockCopyRight .__textCopyRight {
+        font-size: 10px;
     }
 }   
 @media screen and (max-width: 374px) {
